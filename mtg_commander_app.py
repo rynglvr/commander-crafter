@@ -192,7 +192,7 @@ def main():
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<h1 class="main-header">🃏 MTG Commander Crafter</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">🃏 Ryan\'s Commander Crafter</h1>', unsafe_allow_html=True)
     st.markdown('<p class="subtitle">Get AI-powered creature recommendations you won\'t find anywhere else</p>', unsafe_allow_html=True)
 
     system, error = load_recommendation_system()
@@ -207,7 +207,7 @@ def main():
     commanders = sorted(system.features_df['commander'].unique())
     selected_commander = st.sidebar.selectbox("Select a Commander:", commanders)
     num_recommendations = st.sidebar.slider("Recommendations:", 5, 100, 25, 5)
-    max_price = st.sidebar.slider("Max Price ($):", 0.0, 100.0, 100.0, 5.0)
+    max_price = st.sidebar.slider("Max Price ($):", 0.0, 100.0, 500.0, 5.0)
 
     if st.session_state.get('get_recommendations', False):
         commander_info = system.get_commander_info(selected_commander)
@@ -270,7 +270,7 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div class="footer">
-        🃏 For Ryan\'s Friends<br>
+        🃏 For Ryan\'s Friends Only 💯💯💯<br>
         <small>Card data provided by <a href="https://scryfall.com/" target="_blank" style="color: #336;">Scryfall</a></small>
     </div>
     """, unsafe_allow_html=True)
