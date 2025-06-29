@@ -21,18 +21,4 @@ duckdb>=0.8.0
 # Web Application
 streamlit>=1.28.0
 
-# Async Support
-asyncio
-
-# Data Serialization
-pickle
-
-# Text Processing & Utilities (built-in Python modules)
-# ast, re, warnings, collections, typing, time, html, json are built-in
-
-# Optional: If you plan to use TensorFlow later
-# tensorflow>=2.13.0
-
-# Development & Jupyter (optional)
-jupyter>=1.0.0
-ipykernel>=6.25.0
+# Note: pickle, asyncio, ast, re, warnings, collections, typing, time, html, json are built-in Python modules
