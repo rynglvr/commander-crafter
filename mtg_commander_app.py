@@ -207,7 +207,7 @@ def main():
     commanders = sorted(system.features_df['commander'].unique())
     selected_commander = st.sidebar.selectbox("Select a Commander:", commanders)
     num_recommendations = st.sidebar.slider("Recommendations:", 5, 100, 25, 5)
-    max_price = st.sidebar.slider("Max Price ($):", 0.0, 100.0, 500.0, 5.0)
+    max_price = st.sidebar.slider("Max Price ($):", 0.0, 500.0, 100.0, 5.0)
 
     if st.session_state.get('get_recommendations', False):
         commander_info = system.get_commander_info(selected_commander)
