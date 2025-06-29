@@ -256,20 +256,20 @@ def main():
                             with st.container():
                                 display_recommendation_card(rec, rank, card_data)
 
-            if st.button("📅 Export as CSV"):
-                df = pd.DataFrame(recommendations)
-                csv = df.to_csv(index=False)
-                st.download_button(
-                    "Download CSV",
-                    csv,
-                    f"{selected_commander.replace(' ', '_')}_recommendations.csv",
-                    "text/csv"
-                )
+#            if st.button("📅 Export as CSV"):
+#                df = pd.DataFrame(recommendations)
+#                csv = df.to_csv(index=False)
+#                st.download_button(
+#                    "Download CSV",
+#                    csv,
+#                    f"{selected_commander.replace(' ', '_')}_recommendations.csv",
+#                    "text/csv"
+#                )
 
     st.markdown("---")
     st.markdown("""
     <div class="footer">
-        🃏<br>
+        🃏 For Ryan\'s Friends<br>
         <small>Card data provided by <a href="https://scryfall.com/" target="_blank" style="color: #336;">Scryfall</a></small>
     </div>
     """, unsafe_allow_html=True)
