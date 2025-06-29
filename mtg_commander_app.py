@@ -256,15 +256,16 @@ def main():
                             with st.container():
                                 display_recommendation_card(rec, rank, card_data)
 
-#            if st.button("📅 Export as CSV"):
-#                df = pd.DataFrame(recommendations)
-#                csv = df.to_csv(index=False)
-#                st.download_button(
-#                    "Download CSV",
-#                    csv,
-#                    f"{selected_commander.replace(' ', '_')}_recommendations.csv",
-#                    "text/csv"
-#                )
+            if st.button("📅 Export as CSV"):
+                # df = pd.DataFrame(recommendations)
+                df = pd.DataFrame([rec['creature_name'] for rec in recommendations], columns=['Creature Name'])
+                csv = df.to_csv(index=False)
+                st.download_button(
+                    "Download CSV",
+                    csv,
+                    f"{selected_commander.replace(' ', '_')}_recommendations.csv",
+                    "text/csv"
+                )
 
     st.markdown("---")
     st.markdown("""
