@@ -206,8 +206,8 @@ def main():
     st.sidebar.header("⚙️ Configuration")
     commanders = sorted(system.features_df['commander'].unique())
     selected_commander = st.sidebar.selectbox("Select a Commander:", commanders)
-    num_recommendations = st.sidebar.slider("Recommendations:", 5, 100, 15, 5)
-    max_price = st.sidebar.slider("Max Price ($):", 0.0, 100.0, 50.0, 5.0)
+    num_recommendations = st.sidebar.slider("Recommendations:", 5, 100, 25, 5)
+    max_price = st.sidebar.slider("Max Price ($):", 0.0, 100.0, 100.0, 5.0)
 
     if st.session_state.get('get_recommendations', False):
         commander_info = system.get_commander_info(selected_commander)
@@ -269,7 +269,7 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div class="footer">
-        🃏 MTG Commander Recommendation System | Built with Machine Learning<br>
+        🃏<br>
         <small>Card data provided by <a href="https://scryfall.com/" target="_blank" style="color: #336;">Scryfall</a></small>
     </div>
     """, unsafe_allow_html=True)
