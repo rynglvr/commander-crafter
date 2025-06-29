@@ -1,0 +1,38 @@
+# MTG Commander Recommendation System - Requirements
+
+# Core Data Science & ML
+pandas>=1.5.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Natural Language Processing
+nltk>=3.8
+
+# Web Scraping & HTTP
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+httpx>=0.24.0
+
+# Database
+duckdb>=0.8.0
+
+# Web Application
+streamlit>=1.28.0
+
+# Async Support
+asyncio
+
+# Data Serialization
+pickle
+
+# Text Processing & Utilities (built-in Python modules)
+# ast, re, warnings, collections, typing, time, html, json are built-in
+
+# Optional: If you plan to use TensorFlow later
+# tensorflow>=2.13.0
+
+# Development & Jupyter (optional)
+jupyter>=1.0.0
+ipykernel>=6.25.0
